@@ -1,0 +1,14 @@
+#include <Arduino.h>
+
+const int mosfetPin = 6; // IO6 on ESP32-C3
+
+void setup() {
+  pinMode(mosfetPin, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(mosfetPin, HIGH); // Turn MOSFET ON
+  delay(2000);                   // Wait 2 seconds
+  digitalWrite(mosfetPin, LOW);  // Turn MOSFET OFF
+  delay(2000);                   // Wait 2 seconds
+}
